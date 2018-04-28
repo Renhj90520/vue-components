@@ -144,7 +144,8 @@ header span {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  transition: opacity 300ms ease-in, left 600ms ease-in;
+  transition: opacity 200ms ease-in, left 300ms ease-in;
+  left: 0;
 }
 .mask a {
   position: absolute;
@@ -173,9 +174,9 @@ header span {
 }
 .slide-enter {
   opacity: 0;
+  left: 100%;
 }
 .slide-enter-active {
-  left: 0;
 }
 .slide-leave {
 }

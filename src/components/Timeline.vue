@@ -5,8 +5,9 @@
   </div>
   <app-timeline-item></app-timeline-item>
   <app-timeline-item></app-timeline-item>
-  <div class="oper-wrapper">
+  <div class="oper-wrapper" @mouseenter="showTip=true" @mouseleave="showTip=false">
       <a href="#" id="last-oper">
+        <app-tooltip message="load more" :show="showTip"></app-tooltip>
         <i class="fa fa-plus"></i>
       </a>
   </div>
@@ -14,9 +15,16 @@
 </template>
 <script>
 import TimelineItem from './TimelineItem';
+import Tooltip from './Tooltip';
 export default {
+  data() {
+    return {
+      showTip: false
+    };
+  },
   components: {
-    'app-timeline-item': TimelineItem
+    'app-timeline-item': TimelineItem,
+    'app-tooltip': Tooltip
   }
 };
 </script>
@@ -32,7 +40,7 @@ export default {
   height: 100%;
   background-color: #e1e1e1;
   position: absolute;
-  left: 88px;
+  left: 86px;
   margin-bottom: 50px;
 }
 .timeline-dot {
