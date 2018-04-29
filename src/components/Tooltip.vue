@@ -20,9 +20,6 @@ export default {
     const selfHeight = this.$refs.el.clientHeight;
     this.left = parentWidth / 2 - selfWidth / 2;
     this.top = -selfHeight;
-    console.log(this.left);
-    console.log(this.top);
-    console.log('===================');
   }
 };
 </script>

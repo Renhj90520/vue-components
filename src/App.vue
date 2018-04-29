@@ -9,6 +9,7 @@
   </div>
   <app-hi-icon icon="fa-amazon"></app-hi-icon>
   <app-roundcontrol></app-roundcontrol>
+  <app-vote-rating :currentValue="3" @vote="dovote($event)"></app-vote-rating>
 </div>
 </template>
 
@@ -18,6 +19,7 @@ import SlideMenu from './components/SlideMenu';
 import Timeline from './components/Timeline';
 import HiIcon from './components/HiIcon';
 import RoundControl from './components/RouncControl';
+import VoteRating from './components/VoteRating';
 export default {
   name: 'App',
   components: {
@@ -25,7 +27,13 @@ export default {
     'app-slide-menu': SlideMenu,
     'app-timeline': Timeline,
     'app-hi-icon': HiIcon,
-    'app-roundcontrol': RoundControl
+    'app-roundcontrol': RoundControl,
+    'app-vote-rating': VoteRating
+  },
+  methods: {
+    dovote(e) {
+      console.log(e);
+    }
   }
 };
 </script>
