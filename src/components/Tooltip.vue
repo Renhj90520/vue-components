@@ -1,13 +1,29 @@
 <template>
-<transition name="slide">
-  <div class="tooltip-host" v-show="show">
+  <div class="tooltip-host" ref="el" :class="{show:show}" :style="{left:left+'px',top:top+'px'}">
       <div class="inner">{{message}}</div>
   </div>
-</transition>
 </template>
 <script>
 export default {
-  props: ['message', 'show']
+  data() {
+    return {
+      left: 0,
+      top: 0
+    };
+  },
+  props: ['message', 'show'],
+  mounted() {
+    const parent = this.$refs.el.parentElement;
+    const parentWidth = parent.clientWidth;
+    const parentHeight = parent.clientHeight;
+    const selfWidth = this.$refs.el.clientWidth;
+    const selfHeight = this.$refs.el.clientHeight;
+    this.left = parentWidth / 2 - selfWidth / 2;
+    this.top = -selfHeight;
+    console.log(this.left);
+    console.log(this.top);
+    console.log('===================');
+  }
 };
 </script>
 <style scoped>
@@ -16,9 +32,9 @@ export default {
   font-size: 11px;
   display: block;
   z-index: 999;
-  top: -90%;
   min-width: 100px;
-  left: -50%;
+  opacity: 0;
+  transition: all 300ms ease-in;
 }
 .inner {
   background-color: rgba(24, 193, 208, 0.5);
@@ -42,14 +58,8 @@ export default {
   left: 50%;
   margin-left: -5px;
 }
-.slide-enter,
-.slide-leave-to {
-  opacity: 0;
-  top: -30%;
-}
-.slide-enter-active,
-.slide-leave-active {
-  transition: all 300ms ease-in;
+.show {
+  opacity: 1;
 }
 </style>
 

@@ -7,6 +7,8 @@
   <div class="container">
     <app-timeline></app-timeline>
   </div>
+  <app-hi-icon icon="fa-amazon"></app-hi-icon>
+  <app-roundcontrol></app-roundcontrol>
 </div>
 </template>
 
@@ -14,12 +16,16 @@
 import DownArrow from './components/DownArrow';
 import SlideMenu from './components/SlideMenu';
 import Timeline from './components/Timeline';
+import HiIcon from './components/HiIcon';
+import RoundControl from './components/RouncControl';
 export default {
   name: 'App',
   components: {
     'app-down-arrow': DownArrow,
     'app-slide-menu': SlideMenu,
-    'app-timeline': Timeline
+    'app-timeline': Timeline,
+    'app-hi-icon': HiIcon,
+    'app-roundcontrol': RoundControl
   }
 };
 </script>
