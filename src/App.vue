@@ -11,6 +11,24 @@
   <app-roundcontrol></app-roundcontrol>
   <app-vote-rating :currentValue="3" @vote="dovote($event)"></app-vote-rating>
   <app-galleryitem :img="image"></app-galleryitem>
+  <app-collapsepanel title="Title">
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+      text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+      It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+    </p>
+    <p>
+      It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+      desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+  </app-collapsepanel>
+  <app-collapse-another title="Title">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius ligula et enim posuere ac hendrerit eros varius.
+      Mauris ut sollicitudin odio. Aliquam in facilisis massa. Donec vel est adipiscing dui congue bibendum. Aliquam aliquam
+      sollicitudin euismod. Fusce sit amet scelerisque urna. Curabitur ultrices velit sed metus dignissim venenatis. Vivamus
+      urna augue, tincidunt at semper eget, tincidunt vel est. Donec vitae tortor nec orci mattis lobortis. Vivamus id libero
+      est. Proin quis nunc non tortor ornare tempor fermentum at dolor. Cras vel turpis magna.</p>
+  </app-collapse-another>
 </div>
 </template>
 
@@ -22,6 +40,9 @@ import HiIcon from './components/HiIcon';
 import RoundControl from './components/RouncControl';
 import VoteRating from './components/VoteRating';
 import GalleryItem from './components/GalleryItem';
+import CollapsePanel from './components/CollapsePanel';
+import CollapsePanelAnthor from './components/AnotherCollapsePanel';
+import AnotherCollapsePanelVue from './components/AnotherCollapsePanel.vue';
 export default {
   name: 'App',
   components: {
@@ -31,7 +52,9 @@ export default {
     'app-hi-icon': HiIcon,
     'app-roundcontrol': RoundControl,
     'app-vote-rating': VoteRating,
-    'app-galleryitem': GalleryItem
+    'app-galleryitem': GalleryItem,
+    'app-collapsepanel': CollapsePanel,
+    'app-collapse-another': AnotherCollapsePanelVue
   },
   methods: {
     dovote(e) {

@@ -126,7 +126,7 @@ p {
   transform: translateY(-200px);
 }
 .bounce-enter-to {
-  animation: bounce-down 900ms;
+  animation: bounce-down 800ms;
 }
 .bounce-leave {
   transform: translateY(0px);
@@ -140,7 +140,7 @@ p {
   transform: translateY(-200px);
 }
 .slide-enter-to {
-  transition: transform 200ms ease-in;
+  transition: transform 200ms 100ms ease-in;
 }
 .slide-leave-to {
   transition: transform 200ms ease-in-out;
