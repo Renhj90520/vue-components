@@ -84,7 +84,7 @@ li a {
   width: 32px;
   height: 32px;
   background-size: 0 0;
-  background-image: url('../assets/images/switch-color-active.png');
+  background-image: url('/static/images/switch-color-active.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-color: #ccc;
@@ -132,7 +132,7 @@ li a:active {
 .toggle-btn {
   width: 30px;
   height: 40px;
-  background-image: url('../assets/images/setting.png');
+  background-image: url('/static/images/setting.png');
   background-repeat: no-repeat;
   background-position: center;
   background-color: white;

@@ -10,6 +10,7 @@
   <app-hi-icon icon="fa-amazon"></app-hi-icon>
   <app-roundcontrol></app-roundcontrol>
   <app-vote-rating :currentValue="3" @vote="dovote($event)"></app-vote-rating>
+  <app-galleryitem :img="image"></app-galleryitem>
 </div>
 </template>
 
@@ -20,6 +21,7 @@ import Timeline from './components/Timeline';
 import HiIcon from './components/HiIcon';
 import RoundControl from './components/RouncControl';
 import VoteRating from './components/VoteRating';
+import GalleryItem from './components/GalleryItem';
 export default {
   name: 'App',
   components: {
@@ -28,12 +30,22 @@ export default {
     'app-timeline': Timeline,
     'app-hi-icon': HiIcon,
     'app-roundcontrol': RoundControl,
-    'app-vote-rating': VoteRating
+    'app-vote-rating': VoteRating,
+    'app-galleryitem': GalleryItem
   },
   methods: {
     dovote(e) {
       console.log(e);
     }
+  },
+  data() {
+    return {
+      image: {
+        src: '/static/images/example_4.jpg',
+        title: 'LOREM IPSUM DOLOR',
+        description: 'Some description'
+      }
+    };
   }
 };
 </script>

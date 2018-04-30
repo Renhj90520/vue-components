@@ -55,7 +55,7 @@ a {
   height: 60px;
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.1);
-  background-image: url('../assets/images/arrow.png');
+  background-image: url('/static/images/arrow.png');
   background-repeat: no-repeat;
   background-position: center;
   transition: background-color 300ms;

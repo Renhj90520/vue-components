@@ -167,7 +167,7 @@ header span {
   height: 20px;
   display: block;
   position: absolute;
-  background-image: url('../assets/images/triangle-timeline.png');
+  background-image: url('/static/images/triangle-timeline.png');
   background-repeat: no-repeat;
   top: 50%;
   left: -10px;
