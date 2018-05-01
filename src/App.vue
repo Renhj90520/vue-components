@@ -29,6 +29,7 @@
       urna augue, tincidunt at semper eget, tincidunt vel est. Donec vitae tortor nec orci mattis lobortis. Vivamus id libero
       est. Proin quis nunc non tortor ornare tempor fermentum at dolor. Cras vel turpis magna.</p>
   </app-collapse-another>
+  <app-slide-carousel :items="carouselItems"></app-slide-carousel>
 </div>
 </template>
 
@@ -43,6 +44,7 @@ import GalleryItem from './components/GalleryItem';
 import CollapsePanel from './components/CollapsePanel';
 import CollapsePanelAnthor from './components/AnotherCollapsePanel';
 import AnotherCollapsePanelVue from './components/AnotherCollapsePanel.vue';
+import SlideCarousel from './components/SlideCarousel';
 export default {
   name: 'App',
   components: {
@@ -54,7 +56,8 @@ export default {
     'app-vote-rating': VoteRating,
     'app-galleryitem': GalleryItem,
     'app-collapsepanel': CollapsePanel,
-    'app-collapse-another': AnotherCollapsePanelVue
+    'app-collapse-another': AnotherCollapsePanelVue,
+    'app-slide-carousel': SlideCarousel
   },
   methods: {
     dovote(e) {
@@ -67,7 +70,14 @@ export default {
         src: '/static/images/example_4.jpg',
         title: 'LOREM IPSUM DOLOR',
         description: 'Some description'
-      }
+      },
+      carouselItems: [
+        { src: '/static/images/banner-width1.png' },
+        { src: '/static/images/banner-width2.png' },
+        { src: '/static/images/banner-width3.png' },
+        { src: '/static/images/banner-width4.png' },
+        { src: '/static/images/banner-width5.png' }
+      ]
     };
   }
 };

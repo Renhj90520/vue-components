@@ -31,12 +31,15 @@ export default {
   },
   mounted() {
     this.clientHeight = this.$refs.el.clientHeight;
+    this.margin = -this.clientHeight;
   }
 };
 </script>
 <style scoped>
 .collapse-host {
   position: relative;
+  height: auto;
+  min-height: 40px;
 }
 a {
   text-decoration: none;
