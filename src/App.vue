@@ -31,6 +31,7 @@
   </app-collapse-another>
   <app-slide-carousel :items="carouselItems"></app-slide-carousel>
   <app-roll-carousel :items="carouselItems" :showItemNum="4"></app-roll-carousel>
+  <app-tabpanel-blue :items="tabitems"></app-tabpanel-blue>
 </div>
 </template>
 
@@ -47,6 +48,7 @@ import CollapsePanelAnthor from './components/AnotherCollapsePanel';
 import AnotherCollapsePanelVue from './components/AnotherCollapsePanel.vue';
 import RollCarousel from './components/RollCarousel';
 import SlideCarousel from './components/SlideCarousel';
+import TabPanelBlue from './components/TabPanelBlue';
 export default {
   name: 'App',
   components: {
@@ -60,7 +62,8 @@ export default {
     'app-collapsepanel': CollapsePanel,
     'app-collapse-another': AnotherCollapsePanelVue,
     'app-slide-carousel': SlideCarousel,
-    'app-roll-carousel': RollCarousel
+    'app-roll-carousel': RollCarousel,
+    'app-tabpanel-blue': TabPanelBlue
   },
   methods: {
     dovote(e) {
@@ -80,6 +83,38 @@ export default {
         { src: '/static/images/banner-width3.png' },
         { src: '/static/images/banner-width4.png' },
         { src: '/static/images/banner-width5.png' }
+      ],
+      tabitems: [
+        {
+          title: 'Panel One',
+          content: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+    voluptate velitesse cillum dolore eu fugiat nulla pariatur.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.`
+        },
+        {
+          title: 'Panel Two',
+          content: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua 1.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+    voluptate velitesse cillum dolore eu fugiat nulla pariatur.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.`
+        },
+        {
+          title: 'Panel Three',
+          content: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua 2.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+    voluptate velitesse cillum dolore eu fugiat nulla pariatur.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.`
+        }
       ]
     };
   }
