@@ -30,6 +30,7 @@
       est. Proin quis nunc non tortor ornare tempor fermentum at dolor. Cras vel turpis magna.</p>
   </app-collapse-another>
   <app-slide-carousel :items="carouselItems"></app-slide-carousel>
+  <app-roll-carousel :items="carouselItems" :showItemNum="4"></app-roll-carousel>
 </div>
 </template>
 
@@ -44,6 +45,7 @@ import GalleryItem from './components/GalleryItem';
 import CollapsePanel from './components/CollapsePanel';
 import CollapsePanelAnthor from './components/AnotherCollapsePanel';
 import AnotherCollapsePanelVue from './components/AnotherCollapsePanel.vue';
+import RollCarousel from './components/RollCarousel';
 import SlideCarousel from './components/SlideCarousel';
 export default {
   name: 'App',
@@ -57,7 +59,8 @@ export default {
     'app-galleryitem': GalleryItem,
     'app-collapsepanel': CollapsePanel,
     'app-collapse-another': AnotherCollapsePanelVue,
-    'app-slide-carousel': SlideCarousel
+    'app-slide-carousel': SlideCarousel,
+    'app-roll-carousel': RollCarousel
   },
   methods: {
     dovote(e) {
