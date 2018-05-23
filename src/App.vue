@@ -32,6 +32,7 @@
   <app-slide-carousel :items="carouselItems"></app-slide-carousel>
   <app-roll-carousel :items="carouselItems" :showItemNum="4"></app-roll-carousel>
   <app-tabpanel-blue :items="tabitems"></app-tabpanel-blue>
+  <app-canvas></app-canvas>
 </div>
 </template>
 
@@ -49,6 +50,7 @@ import AnotherCollapsePanelVue from './components/AnotherCollapsePanel.vue';
 import RollCarousel from './components/RollCarousel';
 import SlideCarousel from './components/SlideCarousel';
 import TabPanelBlue from './components/TabPanelBlue';
+import Canvas from './components/canvas';
 export default {
   name: 'App',
   components: {
@@ -63,7 +65,8 @@ export default {
     'app-collapse-another': AnotherCollapsePanelVue,
     'app-slide-carousel': SlideCarousel,
     'app-roll-carousel': RollCarousel,
-    'app-tabpanel-blue': TabPanelBlue
+    'app-tabpanel-blue': TabPanelBlue,
+    'app-canvas': Canvas
   },
   methods: {
     dovote(e) {
